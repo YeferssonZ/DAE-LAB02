@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'volumen',
-    'calculadora',
+    'calculadora.apps.CalculadoraConfig',
     'encuesta.apps.EncuestaConfig',
     'django.contrib.admin',
     'django.contrib.auth',
