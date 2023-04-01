@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculo de Volumen de Cilindro</title>
+</head>
+<body>
+	<h2>Calculo de Volumen de Cilindro</h2>
+	<form>
+		<label for="diametro">Introduzca el diametro en metros:</label>
+		<input type="number" id="diametro" name="diametro" required><br>
+
+		<label for="altura">Introduzca la altura en metros:</label>
+		<input type="number" id="altura" name="altura" required><br>
+
+		<input type="button" value="Calcular" onclick="calcularVolumen()">
+	</form>
+
+	<div id="resultado"></div>
+
+	<script>
+		function calcularVolumen() {
+			const altura = parseFloat(document.getElementById("altura").value);
+			const diametro = parseFloat(document.getElementById("diametro").value);
+			const radio = diametro / 2;
+			const volumen = Math.PI * radio * radio * altura;
+			document.getElementById("resultado").innerHTML = `El volumen del cilindro es: ${volumen} metros cúbicos.`;
+		}
+	</script>
+</body>
+</html>
